@@ -11,7 +11,7 @@ const io = new SocketIO(server)
 app.use(express.static(path.resolve('./public')))
 
 //socket connetion 
-io.on('connetion',socket =>{
+io.on('connection',socket =>{
     console.log('Socket Conneted',socket.id)
 })
 

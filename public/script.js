@@ -4,6 +4,8 @@ const startButton = document.getElementById('start-btn')
 //2 step; akhon kaj holo TCP te convert korte hobe, coz start button e click korle jate seta youtube,facebook e live e convert hoy, ar amara jani media TCP connection e streming kora jay na, er jonno amader streming korar jonno record kore kore binary te convert kore dekhate hobe
 
  let state ={media: null}
+ //step 5: socket connetion
+ const socket = io()
 
  //step 3: convert to binary; bitrate kom rakle video lagy holew cpu te kom prssure porbe, r bitrate besi hole cpu te onek besi presure porve
 startButton.addEventListener('click',()=>{
