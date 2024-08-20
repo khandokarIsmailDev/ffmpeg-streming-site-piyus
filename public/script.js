@@ -18,6 +18,8 @@ startButton.addEventListener('click',()=>{
     //step 4: jokon kono binary data availabe hobe orthat j record kore j binary available ta access korbo
     mediaRecorder.ondataavailable = ev =>{
         console.log('binary stem available',ev.data)
+        //step6: ev.data k backend e send korlam. mane socket e send korbo binary stram hisabe
+        socket.emit('binarystream',ev.data) 
     }
 
     mediaRecorder.start(25)

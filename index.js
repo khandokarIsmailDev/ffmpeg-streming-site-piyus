@@ -13,6 +13,9 @@ app.use(express.static(path.resolve('./public')))
 //socket connetion 
 io.on('connection',socket =>{
     console.log('Socket Conneted',socket.id)
+    socket.on('binarystream',stream =>{
+        console.log('Binary Stram Incoming...')
+    })
 })
 
 server.listen(3000,()=>console.log(`HTTP Server is Running PORT 3000 `))
